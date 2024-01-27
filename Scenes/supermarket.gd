@@ -12,6 +12,8 @@ var section_locations = [
 	Vector2(2400,800)
 ]
 
+var frames = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	index = randi() % section_locations.size()
@@ -31,14 +33,21 @@ func _ready():
 	section_locations.remove_at(index)
 	$Veggies.position = section_locations[0]
 	
-	var item = collectible.instantiate()
-	add_child(item)
-	item.get_child(0).animation = "default"
-	item.get_child(0).play()
-	item.get_child(0).set_frame_and_progress(10,1.0)
-	print(item.get_child(0).frame)
-
-
+	for i in frames:
+		var item = collectible.instantiate()
+		add_child(item)
+		item.get_child(1).frame = i
+		item.position = placeItem(i)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+func placeItem(itemIndex):
+	match (itemIndex):
+		0: return Vector2($Fruits.position+Vector2(250,200))
+		1: return Vector2($Fruits.position+Vector2(500,300))
+		2: return Vector2($Meats.position+Vector2(250,350))
+		8: return Vector2($Meats.position+Vector2(500,550))
+		10: return Vector2($Meats.position+Vector2(900,150))
+		14: return Vector2($Fruits.position+Vector2(900,400))
+		_: return Vector2(0,0)
+
 func _process(delta):
 	pass

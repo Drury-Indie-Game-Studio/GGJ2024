@@ -17,3 +17,4 @@ func _process(delta):
 	if collected == true:
 		fade -= 1.0*delta
 		modulate = Color(1.0,1.0,1.0,fade)
+
