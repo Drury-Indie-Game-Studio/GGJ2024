@@ -2,7 +2,7 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("AnimatedSprite2D").play("Idle")
+	get_node("Animate_StartButton").play("Idle")
 # Import necessary module
 # If this is not at the beginning of your script
 # it can cause issues, so ensure it's at the top.
@@ -23,8 +23,8 @@ func _quit():
 
 
 func _on_mouse_entered():
-	get_node("AnimatedSprite2D").play("Focus")
+	get_node("Animate_StartButton").play("Focus")
 
 
 func _on_mouse_exited():
-	get_node("AnimatedSprite2D").play("Idle")
+	get_node("Animate_StartButton").play("Idle")
