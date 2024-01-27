@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bw14epdojylv3"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer - Main" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer - Main"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Logo"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer - Buttons" type="VBoxContainer" parent="VBoxContainer - Main"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="VBoxContainer - Main/VBoxContainer - Buttons"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 42
+text = "Start"
+
+[node name="Settings" type="Label" parent="VBoxContainer - Main/VBoxContainer - Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 42
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Label" parent="VBoxContainer - Main/VBoxContainer - Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 42
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer - Main"]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer - Main/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GGJ" type="Label" parent="VBoxContainer - Main/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Global Game Jam 2024"
+
+[node name="Copyright" type="Label" parent="VBoxContainer - Main/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copyright © 2024 Drury Indie Game Studio"
+horizontal_alignment = 2
