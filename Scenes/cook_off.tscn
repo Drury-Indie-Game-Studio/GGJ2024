@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtaigigjbavp3"]
+[gd_scene load_steps=12 format=3 uid="uid://dtaigigjbavp3"]
 
 [ext_resource type="Script" path="res://Scenes/cook_off.gd" id="1_l3hke"]
 [ext_resource type="Texture2D" uid="uid://2uivodh2whyk" path="res://Assets/Sprites/Dads/Boomer.png" id="2_mhjw3"]
 [ext_resource type="Texture2D" uid="uid://debypx7ap5agy" path="res://Assets/Sprites/MainMenu/empty_bg.png" id="2_svlli"]
 [ext_resource type="Texture2D" uid="uid://ul1wwe5nev1k" path="res://Assets/Sprites/Dads/Football_dad.png" id="3_tdl2r"]
+[ext_resource type="Texture2D" uid="uid://b3injfer6lfdy" path="res://Assets/Sprites/Dishes/plate_1.png" id="4_douci"]
 [ext_resource type="Texture2D" uid="uid://bmagyshvyxrek" path="res://Assets/Sprites/Dads/Hippie.png" id="4_hfrlj"]
 [ext_resource type="Texture2D" uid="uid://b6ax74ibjk8yd" path="res://Assets/Sprites/Dads/MainDad.png" id="5_6sdsw"]
+[ext_resource type="Texture2D" uid="uid://yjv6m6rrs7cs" path="res://Assets/Sprites/Medals/First_place.png" id="5_i5l5k"]
+[ext_resource type="Texture2D" uid="uid://cwg2qg1maq2al" path="res://Assets/Sprites/Dishes/plate_2.png" id="6_oncr3"]
+[ext_resource type="Texture2D" uid="uid://hnlgovasytxw" path="res://Assets/Sprites/Dishes/plate_3.png" id="8_0u4w6"]
+[ext_resource type="Texture2D" uid="uid://bu48j7c5f8v7u" path="res://Assets/Sprites/Dishes/plate_4.png" id="10_3wp7g"]
 
 [node name="Cook-Off" type="Node2D"]
 script = ExtResource("1_l3hke")
@@ -52,6 +57,16 @@ theme_override_font_sizes/font_size = 36
 text = "What’s white and black and ‘red’ all over? A newspaper."
 metadata/_edit_use_anchors_ = true
 
+[node name="Dish" type="Sprite2D" parent="UI/Dad1"]
+position = Vector2(-888.889, -346.875)
+scale = Vector2(2, 2)
+texture = ExtResource("4_douci")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad1"]
+position = Vector2(-688.889, -496.875)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
 [node name="Dad2" type="CanvasGroup" parent="UI"]
 position = Vector2(988.889, 546.875)
 
@@ -86,6 +101,16 @@ theme_override_font_sizes/font_size = 36
 text = "Why did the football coach go to the bank? To get his quarter back."
 metadata/_edit_use_anchors_ = true
 
+[node name="Dish" type="Sprite2D" parent="UI/Dad2"]
+position = Vector2(-888.889, -96.875)
+scale = Vector2(2, 2)
+texture = ExtResource("6_oncr3")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad2"]
+position = Vector2(-688.889, -246.875)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
 [node name="Dad3" type="CanvasGroup" parent="UI"]
 position = Vector2(988.889, 546.875)
 
@@ -119,6 +144,16 @@ offset_bottom = 146.25
 theme_override_font_sizes/font_size = 36
 text = "So you want peace on Earth? A piece of what?"
 metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad3"]
+position = Vector2(-888.889, 153.125)
+scale = Vector2(2, 2)
+texture = ExtResource("8_0u4w6")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad3"]
+position = Vector2(-688.889, 3.12497)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
 
 [node name="Dad4" type="CanvasGroup" parent="UI"]
 position = Vector2(988.889, 546.875)
@@ -190,6 +225,16 @@ theme_override_font_sizes/font_size = 36
 text = "Choose Your Dad-sona:
 "
 metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad4"]
+position = Vector2(-888.889, 403.125)
+scale = Vector2(2, 2)
+texture = ExtResource("10_3wp7g")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad4"]
+position = Vector2(-688.889, 253.125)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
 
 [connection signal="pressed" from="UI/Dad4/Joke1" to="." method="_on_joke_1_pressed"]
 [connection signal="pressed" from="UI/Dad4/Joke2" to="." method="_on_joke_2_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://syrqlono4ckl"
-path="res://.godot/imported/burger.png-82abca51d1c7b8e7a26ee2e71e022a72.ctex"
+uid="uid://cdek8un3ide4e"
+path="res://.godot/imported/plate_6.png-2b9d7b8dd77753f054b89e1928f69da3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Dishes/burger.png"
-dest_files=["res://.godot/imported/burger.png-82abca51d1c7b8e7a26ee2e71e022a72.ctex"]
+source_file="res://Assets/Sprites/Dishes/plate_6.png"
+dest_files=["res://.godot/imported/plate_6.png-2b9d7b8dd77753f054b89e1928f69da3.ctex"]
 
 [params]
 
