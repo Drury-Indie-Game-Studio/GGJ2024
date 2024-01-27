@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv0u2th6ow688"]
+[gd_scene load_steps=24 format=3 uid="uid://bv0u2th6ow688"]
 
 [ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_j2ff0"]
@@ -8,9 +8,60 @@
 [ext_resource type="Texture2D" uid="uid://5vroh5obvmbg" path="res://Assets/Sprites/MainMenu/menu_options.png" id="5_4bifi"]
 [ext_resource type="Texture2D" uid="uid://xc35mej3hue2" path="res://Assets/Sprites/MainMenu/menu_quit.png" id="5_14wr4"]
 [ext_resource type="Texture2D" uid="uid://d2evto850m3r8" path="res://Assets/Sprites/MainMenu/menu_quit_2.png" id="6_48sar"]
+[ext_resource type="Script" path="res://Scenes/PlayButton.gd" id="6_57hyy"]
 [ext_resource type="Texture2D" uid="uid://cl5mx8spboqi4" path="res://Assets/Sprites/MainMenu/menu_options_2.png" id="6_tspjw"]
+[ext_resource type="Texture2D" uid="uid://kd4loxa0n7ih" path="res://Assets/Sprites/Play/play_focus.png" id="7_32tco"]
 [ext_resource type="BitMap" uid="uid://chaw5v6bg5182" path="res://Assets/Sprites/MainMenu/menu_options_mask.png" id="7_leofl"]
 [ext_resource type="BitMap" uid="uid://c11cyl5a4wrdh" path="res://Assets/Sprites/MainMenu/menu_quit_mask.png" id="7_r8e7u"]
+[ext_resource type="Texture2D" uid="uid://c23kk7g807oyp" path="res://Assets/Sprites/Play/Play_01.png" id="8_nftr5"]
+[ext_resource type="Texture2D" uid="uid://byamwm3sa4lx3" path="res://Assets/Sprites/Play/Play_02.png" id="9_xushv"]
+[ext_resource type="Texture2D" uid="uid://cxj3odtxpa6j5" path="res://Assets/Sprites/Play/Play_03.png" id="10_tqr73"]
+[ext_resource type="Texture2D" uid="uid://brnfxta0rq40o" path="res://Assets/Sprites/Play/Play_04.png" id="11_nui4o"]
+[ext_resource type="Texture2D" uid="uid://bgro5fql7gxaq" path="res://Assets/Sprites/Play/Play_05.png" id="12_ot1c0"]
+[ext_resource type="Texture2D" uid="uid://dw1itv0s81n5t" path="res://Assets/Sprites/Play/Play_06.png" id="13_rqqju"]
+[ext_resource type="Texture2D" uid="uid://ce0pxi15gptv5" path="res://Assets/Sprites/Play/Play_07.png" id="14_qscro"]
+[ext_resource type="Texture2D" uid="uid://dd6baao8hpl1o" path="res://Assets/Sprites/Play/Play_08.png" id="15_50hp0"]
+[ext_resource type="Texture2D" uid="uid://dndysfr5gpkje" path="res://Assets/Sprites/MainMenu/Custody_Cook-Off_Logo.png" id="22_gy0p4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q715m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_32tco")
+}],
+"loop": true,
+"name": &"Focus",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nftr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xushv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tqr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nui4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ot1c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rqqju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qscro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_50hp0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -36,6 +87,13 @@ texture_pressed = ExtResource("2_jsdh2")
 texture_hover = ExtResource("3_74yu0")
 texture_click_mask = ExtResource("4_unk3v")
 stretch_mode = 0
+script = ExtResource("6_57hyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayButton"]
+position = Vector2(962, 543)
+scale = Vector2(4.81, 4.78222)
+sprite_frames = SubResource("SpriteFrames_q715m")
+animation = &"Focus"
 
 [node name="SettingsButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -57,5 +115,12 @@ texture_hover = ExtResource("6_48sar")
 texture_click_mask = ExtResource("7_r8e7u")
 stretch_mode = 0
 
+[node name="CustodyCook-offLogo" type="Sprite2D" parent="."]
+position = Vector2(1394, 310)
+scale = Vector2(3.512, 6.96)
+texture = ExtResource("22_gy0p4")
+
+[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlayButton" to="." method="start_game"]
 [connection signal="pressed" from="QuitButton" to="." method="quit_game"]
