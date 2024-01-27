@@ -20,7 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://dih1nve57smah" path="res://Assets/Sprites/Ingredients/Potato.png" id="17_8qjw0"]
 [ext_resource type="Texture2D" uid="uid://c8j2cxqnjno7v" path="res://Assets/Sprites/Ingredients/Salt.png" id="18_v3tch"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_maigm"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc0ai"]
+size = Vector2(53, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbjyp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -82,17 +85,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc0ai"]
-size = Vector2(53, 53)
-
 [node name="Collectible" type="Area2D"]
 script = ExtResource("1_0lvef")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_maigm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0.5)
 shape = SubResource("RectangleShape2D_jc0ai")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tbjyp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
