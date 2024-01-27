@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://di3veud4o56or"]
+[gd_scene load_steps=3 format=3 uid="uid://di3veud4o56or"]
 
 [ext_resource type="Texture2D" uid="uid://dby47wo7e6ic5" path="res://Assets/Sprites/spices.png" id="1_v5o80"]
-[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="2_gjcb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfryb"]
 size = Vector2(100, 100)
@@ -227,6 +226,3 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stand20"]
 shape = SubResource("RectangleShape2D_jfryb")
-
-[node name="Player" parent="." instance=ExtResource("2_gjcb8")]
-position = Vector2(550, 300)

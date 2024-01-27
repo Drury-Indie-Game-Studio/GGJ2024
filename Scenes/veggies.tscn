@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://oyji51f14csn"]
+[gd_scene load_steps=5 format=3 uid="uid://oyji51f14csn"]
 
 [ext_resource type="Texture2D" uid="uid://qa5ntjhfafw5" path="res://Assets/Sprites/vegtables_2.png" id="1_og4na"]
 [ext_resource type="Texture2D" uid="uid://j5qqrpemdmeh" path="res://Assets/Sprites/vegtables_3.png" id="2_nm6t4"]
 [ext_resource type="Texture2D" uid="uid://di5t5f3p23ttf" path="res://Assets/Sprites/vegtables_4.png" id="3_gf1ct"]
-[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="4_5du6k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2a3k"]
 size = Vector2(100, 100)
@@ -331,6 +330,3 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stand12"]
 shape = SubResource("RectangleShape2D_w2a3k")
-
-[node name="Player" parent="." instance=ExtResource("4_5du6k")]
-position = Vector2(550, 300)

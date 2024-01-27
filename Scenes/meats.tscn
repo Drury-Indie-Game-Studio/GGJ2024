@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://celrj5kwshhs0"]
+[gd_scene load_steps=3 format=3 uid="uid://celrj5kwshhs0"]
 
 [ext_resource type="Texture2D" uid="uid://bcukrin80yf1l" path="res://Assets/Sprites/meat.png" id="1_y306v"]
-[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="2_7p3bu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6xnn"]
 size = Vector2(100, 100)
@@ -379,6 +378,3 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stand28"]
 shape = SubResource("RectangleShape2D_p6xnn")
-
-[node name="Player" parent="." instance=ExtResource("2_7p3bu")]
-position = Vector2(600, 300)
