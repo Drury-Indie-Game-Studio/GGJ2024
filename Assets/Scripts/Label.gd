@@ -2,7 +2,7 @@ extends Label
 
 var on_text = 0
 var textTime = 0
-var textLines = ["You want to see the kids again...","Problem: So do ALL of her other exes","You've all agreed to hold a high-steaks cook out to determine who gets custody.","May the best Dad win."]
+var textLines = ["You want to see the kids again...","Problem: So do ALL of her other exes.","You've all agreed to hold a high-steaks cook-out to determine who gets custody.","May the best Dad win."]
 
 
 # Called when the node enters the scene tree for the first time.
