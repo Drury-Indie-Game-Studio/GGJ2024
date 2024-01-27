@@ -1,0 +1,75 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1uijkgr6krrs"]
+
+[ext_resource type="Texture2D" uid="uid://dm4yeodgb40x" path="res://Assets/Sprites/MainMenu/menu_play.png" id="1_rx8rt"]
+[ext_resource type="Texture2D" uid="uid://bv43eqpgeb7ym" path="res://Assets/Sprites/MainMenu/menu_play_2.png" id="2_04my1"]
+[ext_resource type="BitMap" uid="uid://sesh3ln4vkla" path="res://Assets/Sprites/MainMenu/menu_play_mask.png" id="3_flxca"]
+[ext_resource type="Script" path="res://Scenes/PlayButton.gd" id="4_l4t67"]
+[ext_resource type="Texture2D" uid="uid://kd4loxa0n7ih" path="res://Assets/Sprites/Play/play_focus.png" id="5_rwhpq"]
+[ext_resource type="Texture2D" uid="uid://c23kk7g807oyp" path="res://Assets/Sprites/Play/Play_01.png" id="6_8pfgq"]
+[ext_resource type="Texture2D" uid="uid://byamwm3sa4lx3" path="res://Assets/Sprites/Play/Play_02.png" id="7_8j67e"]
+[ext_resource type="Texture2D" uid="uid://cxj3odtxpa6j5" path="res://Assets/Sprites/Play/Play_03.png" id="8_iv2hd"]
+[ext_resource type="Texture2D" uid="uid://brnfxta0rq40o" path="res://Assets/Sprites/Play/Play_04.png" id="9_sx06c"]
+[ext_resource type="Texture2D" uid="uid://bgro5fql7gxaq" path="res://Assets/Sprites/Play/Play_05.png" id="10_k6ghp"]
+[ext_resource type="Texture2D" uid="uid://dw1itv0s81n5t" path="res://Assets/Sprites/Play/Play_06.png" id="11_g1t3w"]
+[ext_resource type="Texture2D" uid="uid://ce0pxi15gptv5" path="res://Assets/Sprites/Play/Play_07.png" id="12_nn4kk"]
+[ext_resource type="Texture2D" uid="uid://dd6baao8hpl1o" path="res://Assets/Sprites/Play/Play_08.png" id="13_tp4a5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q715m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rwhpq")
+}],
+"loop": true,
+"name": &"Focus",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8pfgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8j67e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iv2hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sx06c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k6ghp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g1t3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nn4kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tp4a5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="PlayButton" type="TextureButton"]
+offset_right = 1920.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("1_rx8rt")
+texture_pressed = ExtResource("1_rx8rt")
+texture_hover = ExtResource("2_04my1")
+texture_click_mask = ExtResource("3_flxca")
+stretch_mode = 0
+script = ExtResource("4_l4t67")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(962, 543)
+scale = Vector2(4.81, 4.78222)
+sprite_frames = SubResource("SpriteFrames_q715m")
+animation = &"Focus"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
