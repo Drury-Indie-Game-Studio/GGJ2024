@@ -28,11 +28,8 @@ var itemDict = {
 var timer = 5
 var timerIsGoing = false
 func _ready():
+	$Race.play(2.37)
 	Global.score = 0
-	
-	$AudioStreamPlayer2D_1.play()
-	$AudioStreamPlayer2D_2.play()
-
 	var tempList = itemList
 	var e = 0
 

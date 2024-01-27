@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtaigigjbavp3"]
+[gd_scene load_steps=15 format=3 uid="uid://dtaigigjbavp3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cook_off.gd" id="1_l3hke"]
 [ext_resource type="Texture2D" uid="uid://2uivodh2whyk" path="res://Assets/Sprites/Dads/Boomer.png" id="2_mhjw3"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cwg2qg1maq2al" path="res://Assets/Sprites/Dishes/plate_2.png" id="6_oncr3"]
 [ext_resource type="Texture2D" uid="uid://hnlgovasytxw" path="res://Assets/Sprites/Dishes/plate_3.png" id="8_0u4w6"]
 [ext_resource type="Texture2D" uid="uid://bu48j7c5f8v7u" path="res://Assets/Sprites/Dishes/plate_4.png" id="10_3wp7g"]
+[ext_resource type="AudioStream" uid="uid://cda5k86dnemt2" path="res://Assets/Sound/Music/03 - judging.wav" id="12_iute8"]
+[ext_resource type="AudioStream" uid="uid://crbnbs5n27ybx" path="res://Assets/Sound/SFX/yay.mp3" id="13_xq1d1"]
+[ext_resource type="AudioStream" uid="uid://ct5wruhhiexp0" path="res://Assets/Sound/Music/05 - gameover.wav" id="14_63u20"]
 
 [node name="Cook-Off" type="Node2D"]
 script = ExtResource("1_l3hke")
@@ -235,6 +238,21 @@ texture = ExtResource("10_3wp7g")
 position = Vector2(-688.889, 253.125)
 scale = Vector2(2, 2)
 texture = ExtResource("5_i5l5k")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_iute8")
+volume_db = 10.0
+autoplay = true
+
+[node name="Yay" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_xq1d1")
+volume_db = 15.0
+
+[node name="Loss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_63u20")
+volume_db = 10.0
 
 [connection signal="pressed" from="UI/Dad4/Joke1" to="." method="_on_joke_1_pressed"]
 [connection signal="pressed" from="UI/Dad4/Joke2" to="." method="_on_joke_2_pressed"]

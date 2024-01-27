@@ -235,5 +235,9 @@ func results():
 	if opponents[3]==1:
 		$UI/Dad4/Medal.texture = medals[0]
 		$UI/Dad4/Medal.visible = true
+		$Yay.play()
+	if opponents[3]==4:
+		$Loss.play()
+		await get_tree().create_timer(9.0).timeout
 	await get_tree().create_timer(3.0).timeout
 	get_tree().change_scene_to_file("res://Scenes/MainMenuBackground.tscn")

@@ -18,6 +18,7 @@ func _on_body_entered(body):
 		for i in itemList:
 			print(i)
 			if i.text == itemName:
+				get_node("../../Pop").play()
 				i.queue_free()
 				Global.score += 1
 

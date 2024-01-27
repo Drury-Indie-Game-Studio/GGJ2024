@@ -6,3 +6,6 @@ func start_game():
 
 func quit_game():
 	get_tree().quit()
+
+func play_twinkle():
+	$TwinkleSFX.Playing = true

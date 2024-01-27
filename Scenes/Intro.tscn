@@ -16,6 +16,7 @@ texture = ExtResource("1_gup0a")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_nyitn")
+autoplay = true
 
 [node name="IntroBackground" type="Sprite2D" parent="."]
 position = Vector2(950, 642)
