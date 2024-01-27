@@ -14,6 +14,27 @@ var section_locations = [
 
 var frames = []
 
+var itemNames = [
+	"apple",
+	"banana",
+	"beef",
+	"bread",
+	"brownie",
+	"butter",
+	"carrot",
+	"cheese",
+	"chicken",
+	"cookie",
+	"eggs",
+	"garlic powder",
+	"lettuce",
+	"milk",
+	"orange",
+	"pepper",
+	"potato",
+	"salt"
+]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	index = randi() % section_locations.size()
@@ -39,6 +60,7 @@ func placeItems():
 		add_child(item)
 		item.get_child(1).frame = f
 		item.position = placeItem(f)
+		item.itemName = itemNames[f]
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func placeItem(itemIndex):

@@ -1,5 +1,6 @@
 extends Node2D
 
+var GameTime = 60
 var itemList = ["apple", "banana", "orange", "lettuce", "carrot", "potato", "milk", "cheese", "butter", "eggs", "beef", "chicken", "bread", "cookie", "brownie", "pepper", "salt", "garlic powder"]
 var shoppingList = ["", "", "", "", "", "", "", "", "", ""]
 var itemDict = {
@@ -43,7 +44,23 @@ func _ready():
 		$Supermarket.frames.append(itemDict[a])
 	
 	$Supermarket.placeItems()
+	
+	for item in shoppingList:
+		var label = Label.new()
+		label.text = item
+		label.modulate = Color(0,0,0)
+		$CanvasLayer/Control/VBoxContainer/TextureRect/MarginContainer/List/Items.add_child(label)
+		print(label.text)
+	$CanvasLayer/Control/VBoxContainer/TimeLeft.text = str(GameTime)
+	$Timer.start()
 
+func checkTime():
+	if GameTime < 1:
+		# Game Over
+		pass
+	else:
+		GameTime-=1
+	$CanvasLayer/Control/VBoxContainer/TimeLeft.text = str(GameTime)
 func _process(delta):
 	pass
 	if timerIsGoing == true:
@@ -51,4 +68,3 @@ func _process(delta):
 		if timer <= 0:
 			pass
 		pass
-	print(timer)
