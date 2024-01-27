@@ -10,7 +10,7 @@ func _ready():
 # Load the next scene
 func _on_button_pressed():
 	# Replace "res://SceneB.tscn" with the path to your SceneB file
-	var scene_path = "res://Scenes/Test.tscn"
+	var scene_path = "res://Scenes/world.tscn"
 	# Change scene
 	get_tree().change_scene_to_file(scene_path)
 
@@ -20,3 +20,11 @@ func _process(_delta):
 
 func _quit():
 	get_tree().quit()
+
+
+func _on_mouse_entered():
+	get_node("AnimatedSprite2D").play("Focus")
+
+
+func _on_mouse_exited():
+	get_node("AnimatedSprite2D").play("Idle")
