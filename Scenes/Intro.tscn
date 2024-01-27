@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfdp5ksiflbny"]
 
 [ext_resource type="Texture2D" uid="uid://dl7qfg1ipch3q" path="res://Assets/Sprites/MainMenu/bg_1.png" id="1_gup0a"]
-[ext_resource type="Script" path="res://Scenes/Intro.gd" id="1_lgwuh"]
+[ext_resource type="Script" path="res://Assets/Scripts/Intro.gd" id="1_lgwuh"]
 [ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="2_nyitn"]
 [ext_resource type="Texture2D" uid="uid://bpqddxifwt5hj" path="res://Assets/Sprites/Intro_background.png" id="4_ev248"]
-[ext_resource type="Script" path="res://Scenes/Label.gd" id="5_56w76"]
+[ext_resource type="Script" path="res://Assets/Scripts/Label.gd" id="5_56w76"]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_lgwuh")

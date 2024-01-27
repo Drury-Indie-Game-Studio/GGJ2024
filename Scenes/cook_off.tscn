@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dtaigigjbavp3"]
 
-[ext_resource type="Script" path="res://Scenes/cook_off.gd" id="1_l3hke"]
+[ext_resource type="Script" path="res://Assets/Scripts/cook_off.gd" id="1_l3hke"]
 [ext_resource type="Texture2D" uid="uid://2uivodh2whyk" path="res://Assets/Sprites/Dads/Boomer.png" id="2_mhjw3"]
 [ext_resource type="Texture2D" uid="uid://debypx7ap5agy" path="res://Assets/Sprites/MainMenu/empty_bg.png" id="2_svlli"]
 [ext_resource type="Texture2D" uid="uid://ul1wwe5nev1k" path="res://Assets/Sprites/Dads/Football_dad.png" id="3_tdl2r"]

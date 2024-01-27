@@ -17,11 +17,14 @@ func _process(delta):
 	text = textLines[on_text]
 	if visible_ratio < 1:
 		visible_ratio += delta
-	if textTime < 5:
+	if textTime < 3:
 		textTime += delta
 	elif on_text < len(textLines) -1:
 		visible_ratio = 0
 		textTime = 0
 		on_text +=1
+	else:
+		var scene_path = "res://Scenes/world.tscn"
+		get_tree().change_scene_to_file(scene_path)
 		
 	

@@ -13,12 +13,13 @@ func _on_body_entered(body):
 	if collected == false:
 		collected = true
 		print("Collected "+itemName)
-		var itemList = get_node("../../CanvasLayer/Control/VBoxContainer/TextureRect/MarginContainer/List/Items").get_children()
+		var itemList = get_node("../../CanvasLayer/Control/VBoxContainer/HBoxContainer/TextureRect/MarginContainer/List/Items").get_children()
 		print(itemList)
 		for i in itemList:
 			print(i)
 			if i.text == itemName:
 				i.queue_free()
+				Global.score += 1
 
 func _process(delta):
 	if collected == true:

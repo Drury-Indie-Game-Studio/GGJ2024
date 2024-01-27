@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SoundFx="*res://Scenes/sound_fx.gd"
+SoundFx="*res://Assets/Scripts/sound_fx.gd"
+Global="*res://global.gd"
 
 [display]
 

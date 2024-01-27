@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://f1pb4qcavlen"]
 
 [ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="1_5kuvm"]
-[ext_resource type="Script" path="res://Scenes/sound_fx.gd" id="1_ojsw3"]
+[ext_resource type="Script" path="res://Assets/Scripts/sound_fx.gd" id="1_ojsw3"]
 
 [node name="SoundFX" type="Node"]
 script = ExtResource("1_ojsw3")

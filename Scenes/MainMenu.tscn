@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://bw14epdojylv3"]
+[gd_scene load_steps=15 format=3 uid="uid://bw14epdojylv3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/StartButton.gd" id="1_lndyy"]
-[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_p64rg"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainMenu.gd" id="1_p64rg"]
 [ext_resource type="Texture2D" uid="uid://cnlnojewacvb1" path="res://Assets/Sprites/Start/Start_01.png" id="2_gqp1m"]
 [ext_resource type="Texture2D" uid="uid://c8sp27ei2tull" path="res://Assets/Sprites/Start/Start_02.png" id="3_urk6g"]
 [ext_resource type="Texture2D" uid="uid://b1hc2h3rbw3n" path="res://Assets/Sprites/Start/Start_03.png" id="4_bx0yi"]
@@ -10,10 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ddue0q448njhc" path="res://Assets/Sprites/Start/Start_06.png" id="7_0fcf2"]
 [ext_resource type="Texture2D" uid="uid://d4baxq6xk8le4" path="res://Assets/Sprites/Start/Start_07.png" id="8_730sm"]
 [ext_resource type="Texture2D" uid="uid://df5m4f4oxrflq" path="res://Assets/Sprites/Start/Start_08.png" id="9_wu50f"]
-[ext_resource type="Script" path="res://Scenes/Quit.gd" id="10_n83ec"]
-[ext_resource type="Script" path="res://Scenes/Settings.gd" id="11_vsct0"]
+[ext_resource type="Script" path="res://Assets/Scripts/Quit.gd" id="10_n83ec"]
+[ext_resource type="Script" path="res://Assets/Scripts/Settings.gd" id="11_vsct0"]
 [ext_resource type="Texture2D" uid="uid://dndysfr5gpkje" path="res://Assets/Sprites/MainMenu/Custody_Cook-Off_Logo.png" id="12_6jvr6"]
-[ext_resource type="PackedScene" uid="uid://bfdp5ksiflbny" path="res://Scenes/Intro.tscn" id="13_hjilf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v65os"]
 animations = [{
@@ -158,16 +157,13 @@ position = Vector2(590, 213.5)
 scale = Vector2(2.608, 2.81)
 texture = ExtResource("12_6jvr6")
 
-[node name="Node2D" parent="." instance=ExtResource("13_hjilf")]
-
 [connection signal="focus_entered" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_on_focus_entered"]
 [connection signal="focus_exited" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_on_focus_exited"]
 [connection signal="mouse_entered" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer - Main/VBoxContainer - Buttons/Start" to="." method="start_game"]
 [connection signal="mouse_entered" from="VBoxContainer - Main/VBoxContainer - Buttons/Quit" to="VBoxContainer - Main/VBoxContainer - Buttons/Quit" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer - Main/VBoxContainer - Buttons/Quit" to="VBoxContainer - Main/VBoxContainer - Buttons/Quit" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer - Main/VBoxContainer - Buttons/Quit" to="VBoxContainer - Main/VBoxContainer - Buttons/Start" method="_quit"]
+[connection signal="pressed" from="VBoxContainer - Main/VBoxContainer - Buttons/Quit" to="." method="quit_game"]
 [connection signal="mouse_entered" from="VBoxContainer - Main/VBoxContainer - Buttons/Settings" to="VBoxContainer - Main/VBoxContainer - Buttons/Settings" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer - Main/VBoxContainer - Buttons/Settings" to="VBoxContainer - Main/VBoxContainer - Buttons/Settings" method="_on_mouse_exited"]

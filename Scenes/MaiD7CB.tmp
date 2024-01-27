@@ -1,6 +1,5 @@
 [gd_scene load_steps=15 format=3 uid="uid://bv0u2th6ow688"]
 
-[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_7lc4l"]
 [ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
 [ext_resource type="Texture2D" uid="uid://dm4yeodgb40x" path="res://Assets/Sprites/MainMenu/menu_play.png" id="3_7rv48"]
 [ext_resource type="Texture2D" uid="uid://bv43eqpgeb7ym" path="res://Assets/Sprites/MainMenu/menu_play_2.png" id="4_rwyk7"]
@@ -15,6 +14,25 @@
 [ext_resource type="AudioStream" uid="uid://c5q88nvis76gr" path="res://Assets/Sound/Music/01- menu.wav" id="24_1715o"]
 [ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="25_kehlc"]
 
+[sub_resource type="GDScript" id="GDScript_h4jy1"]
+script/source = "extends TextureButton
+
+func _ready():
+	get_node(\"AnimatedSprite2D\").play(\"Idle\")
+
+
+func _on_mouse_entered():
+	get_node(\"AnimatedSprite2D\").play(\"Focus\")
+
+
+func _on_mouse_exited():
+	get_node(\"AnimatedSprite2D\").play(\"Idle\")
+
+
+#func _on_pressed():
+	#SoundFx.play_sound()
+"
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -22,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7lc4l")
+script = SubResource("GDScript_h4jy1")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -70,6 +88,3 @@ stream = ExtResource("24_1715o")
 
 [node name="TwinkleSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("25_kehlc")
-
-[connection signal="pressed" from="PlayButton" to="." method="start_game"]
-[connection signal="pressed" from="QuitButton" to="." method="quit_game"]

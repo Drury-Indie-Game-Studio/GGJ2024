@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dam62j35tsg5u"]
 
 [ext_resource type="PackedScene" uid="uid://p1ds7c2ccr2r" path="res://Scenes/fruit_section.tscn" id="1_myrc3"]
-[ext_resource type="Script" path="res://Scenes/supermarket.gd" id="1_now5t"]
+[ext_resource type="Script" path="res://Assets/Scripts/supermarket.gd" id="1_now5t"]
 [ext_resource type="PackedScene" uid="uid://bvwv8s3piv2wr" path="res://Scenes/bakery.tscn" id="2_lsdyy"]
 [ext_resource type="PackedScene" uid="uid://b5hoj6oqfsuj7" path="res://Scenes/dairy_section.tscn" id="3_ipfod"]
 [ext_resource type="PackedScene" path="res://Scenes/meats.tscn" id="4_l76qj"]

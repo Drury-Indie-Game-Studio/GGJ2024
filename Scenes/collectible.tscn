@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cru6qktqsjm2j"]
 
-[ext_resource type="Script" path="res://Scenes/collectible.gd" id="1_0lvef"]
+[ext_resource type="Script" path="res://Assets/Scripts/collectible.gd" id="1_pshjp"]
 [ext_resource type="Texture2D" uid="uid://d2i6r8gbr16xn" path="res://Assets/Sprites/Ingredients/Apple.png" id="1_ti0ma"]
 [ext_resource type="Texture2D" uid="uid://dmn783dl5rl6m" path="res://Assets/Sprites/Ingredients/Banana.png" id="2_4ypoa"]
 [ext_resource type="Texture2D" uid="uid://bp5fxgnv25jhx" path="res://Assets/Sprites/Ingredients/Beef.png" id="3_ikk4n"]
@@ -86,7 +86,7 @@ animations = [{
 }]
 
 [node name="Collectible" type="Area2D"]
-script = ExtResource("1_0lvef")
+script = ExtResource("1_pshjp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0.5)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbfh3saqgp4bs"]
 
-[ext_resource type="Script" path="res://Scenes/Items.gd" id="1_sqclr"]
+[ext_resource type="Script" path="res://Assets/Scripts/Items.gd" id="1_sqclr"]
 
 [sub_resource type="Gradient" id="Gradient_1ch7i"]
 offsets = PackedFloat32Array(1)
@@ -27,14 +27,18 @@ theme_override_font_sizes/font_size = 75
 text = "Time"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.3
 texture = SubResource("GradientTexture1D_gfq2l")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,16 +50,30 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="List" type="VBoxContainer" parent="VBoxContainer/TextureRect/MarginContainer"]
+[node name="List" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/TextureRect/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/TextureRect/MarginContainer/List"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureRect/MarginContainer/List"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Shopping List"
 horizontal_alignment = 1
 
-[node name="Items" type="VBoxContainer" parent="VBoxContainer/TextureRect/MarginContainer/List"]
+[node name="Items" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/TextureRect/MarginContainer/List"]
 layout_mode = 2
 script = ExtResource("1_sqclr")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Controls" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Move with the arrow keys"
