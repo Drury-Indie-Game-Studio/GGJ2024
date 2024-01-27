@@ -47,6 +47,14 @@ var dadPics = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$UI/Dad1/Label.visible=false
+	$UI/Dad2/Label.visible=false
+	$UI/Dad3/Label.visible=false
+	$UI/Dad4/Label.visible=false
+	$UI/Dad4/Pick.visible=false
+	$UI/Dad4/Joke1.visible=false
+	$UI/Dad4/Joke2.visible=false
+	$UI/Dad4/Joke3.visible=false
 	var dads = jokes.keys()
 	index = randi() % dads.size()
 	$UI/Dad1/Label.text = jokes[dads[index]][randi()%3]
@@ -69,11 +77,36 @@ func _ready():
 	index = randi() % dads.size()
 	$UI/Dad4/Joke3.text = dads[index]
 	dads.remove_at(index)
-
+	await get_tree().create_timer(1.0).timeout
+	$UI/Dad1/Label.visible=true
+	await get_tree().create_timer(3.0).timeout
+	$UI/Dad2/Label.visible=true
+	await get_tree().create_timer(3.0).timeout
+	$UI/Dad3/Label.visible=true
+	await get_tree().create_timer(3.0).timeout
+	$UI/Dad4/Pick.visible=true
+	$UI/Dad4/Joke1.visible=true
+	$UI/Dad4/Joke2.visible=true
+	$UI/Dad4/Joke3.visible=true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $UI/Dad1/Label.visible == true:
+		$UI/Dad1/Label.visible_ratio+=0.5*delta
+	else:
+		$UI/Dad1/Label.visible_ratio=0.0
+	if $UI/Dad2/Label.visible == true:
+		$UI/Dad2/Label.visible_ratio+=0.5*delta
+	else:
+		$UI/Dad2/Label.visible_ratio=0.0
+	if $UI/Dad3/Label.visible == true:
+		$UI/Dad3/Label.visible_ratio+=0.5*delta
+	else:
+		$UI/Dad3/Label.visible_ratio=0.0
+	if $UI/Dad4/Label.visible == true:
+		$UI/Dad4/Label.visible_ratio+=0.5*delta
+	else:
+		$UI/Dad4/Label.visible_ratio=0.0
 
 
 func _on_joke_1_pressed():
