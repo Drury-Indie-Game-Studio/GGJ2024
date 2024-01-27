@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c11cyl5a4wrdh"
+path="res://.godot/imported/menu_quit_mask.png-ac06c6d41ec561430357829f0ce8f1be.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/MainMenu/menu_quit_mask.png"
+dest_files=["res://.godot/imported/menu_quit_mask.png-ac06c6d41ec561430357829f0ce8f1be.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

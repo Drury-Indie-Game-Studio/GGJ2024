@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://bv0u2th6ow688"]
+
+[ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
+[ext_resource type="Texture2D" uid="uid://dm4yeodgb40x" path="res://Assets/Sprites/MainMenu/menu_play.png" id="2_jsdh2"]
+[ext_resource type="Texture2D" uid="uid://bv43eqpgeb7ym" path="res://Assets/Sprites/MainMenu/menu_play_2.png" id="3_74yu0"]
+[ext_resource type="BitMap" uid="uid://sesh3ln4vkla" path="res://Assets/Sprites/MainMenu/menu_play_mask.png" id="4_unk3v"]
+[ext_resource type="Texture2D" uid="uid://5vroh5obvmbg" path="res://Assets/Sprites/MainMenu/menu_options.png" id="5_4bifi"]
+[ext_resource type="Texture2D" uid="uid://xc35mej3hue2" path="res://Assets/Sprites/MainMenu/menu_quit.png" id="5_14wr4"]
+[ext_resource type="Texture2D" uid="uid://d2evto850m3r8" path="res://Assets/Sprites/MainMenu/menu_quit_2.png" id="6_48sar"]
+[ext_resource type="Texture2D" uid="uid://cl5mx8spboqi4" path="res://Assets/Sprites/MainMenu/menu_options_2.png" id="6_tspjw"]
+[ext_resource type="BitMap" uid="uid://chaw5v6bg5182" path="res://Assets/Sprites/MainMenu/menu_options_mask.png" id="7_leofl"]
+[ext_resource type="BitMap" uid="uid://c11cyl5a4wrdh" path="res://Assets/Sprites/MainMenu/menu_quit_mask.png" id="7_r8e7u"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_88e6r")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("2_jsdh2")
+texture_pressed = ExtResource("2_jsdh2")
+texture_hover = ExtResource("3_74yu0")
+texture_click_mask = ExtResource("4_unk3v")
+stretch_mode = 0
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("5_4bifi")
+texture_pressed = ExtResource("5_4bifi")
+texture_hover = ExtResource("6_tspjw")
+texture_click_mask = ExtResource("7_leofl")
+stretch_mode = 0
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("5_14wr4")
+texture_pressed = ExtResource("5_14wr4")
+texture_hover = ExtResource("6_48sar")
+texture_click_mask = ExtResource("7_r8e7u")
+stretch_mode = 0
