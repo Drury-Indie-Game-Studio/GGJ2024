@@ -1,22 +1,140 @@
-[gd_scene load_steps=4 format=3 uid="uid://nekt8xunmldi"]
+[gd_scene load_steps=13 format=3 uid="uid://nekt8xunmldi"]
 
-[ext_resource type="Script" path="res://Scenes/World.gd" id="1_0jeua"]
-[ext_resource type="AudioStream" uid="uid://c54svo7xs0x6t" path="res://Assets/Sound/SFX/pop.wav" id="2_glh0w"]
+[ext_resource type="Script" path="res://Assets/Scripts/World.gd" id="1_0jeua"]
+[ext_resource type="Texture2D" uid="uid://v85waqnvayp2" path="res://Assets/Sprites/Game_Floor.png" id="2_5kteb"]
+[ext_resource type="AudioStream" uid="uid://b6nodrxmtf2lh" path="res://Assets/Sound/SFX/pop.wav" id="2_glh0w"]
 [ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="3_hulk0"]
+[ext_resource type="PackedScene" uid="uid://dam62j35tsg5u" path="res://Scenes/supermarket.tscn" id="4_vjeq4"]
+[ext_resource type="Texture2D" uid="uid://buvrxu0irp51x" path="res://Assets/Sprites/Wall.png" id="6_lmu5a"]
+[ext_resource type="Texture2D" uid="uid://bj1bxd0yifruo" path="res://Assets/Sprites/Register.png" id="6_si4iq"]
+[ext_resource type="Texture2D" uid="uid://c8o34bal6j431" path="res://Assets/Sprites/Door.png" id="8_7k70e"]
+[ext_resource type="Script" path="res://Assets/Scripts/CanvasLayer.gd" id="9_p2k0i"]
+[ext_resource type="PackedScene" uid="uid://dbfh3saqgp4bs" path="res://Scenes/GameUI.tscn" id="10_p2eo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxqda"]
+size = Vector2(3900, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo845"]
+size = Vector2(350, 150)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_0jeua")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 384.0
-offset_top = 259.0
-offset_right = 715.0
-offset_bottom = 389.0
-theme_override_font_sizes/font_size = 95
-text = "Testing"
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 4300.0
+offset_bottom = 2700.0
+texture = ExtResource("2_5kteb")
+stretch_mode = 1
 
 [node name="AudioStreamPlayer2D_1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_glh0w")
 
 [node name="AudioStreamPlayer2D_2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_hulk0")
+
+[node name="Stand" type="StaticBody2D" parent="."]
+position = Vector2(-150, -100)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand"]
+position = Vector2(2250, -500)
+scale = Vector2(280, 22)
+texture = ExtResource("6_lmu5a")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand"]
+position = Vector2(1900, 0)
+shape = SubResource("RectangleShape2D_uxqda")
+
+[node name="Stand3" type="StaticBody2D" parent="."]
+position = Vector2(-150, -100)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand3"]
+position = Vector2(-325, 1175)
+scale = Vector2(15, 65)
+texture = ExtResource("6_lmu5a")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand3"]
+position = Vector2(0, 900)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_uxqda")
+
+[node name="Stand4" type="StaticBody2D" parent="."]
+position = Vector2(3650, -100)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand4"]
+position = Vector2(350, 1275)
+scale = Vector2(16, 63)
+texture = ExtResource("6_lmu5a")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand4"]
+position = Vector2(0, 900)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_uxqda")
+
+[node name="Stand2" type="StaticBody2D" parent="."]
+position = Vector2(-150, 1750)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand2"]
+position = Vector2(1900, 450)
+scale = Vector2(78, 20)
+texture = ExtResource("6_lmu5a")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand2"]
+position = Vector2(1900, 0)
+shape = SubResource("RectangleShape2D_uxqda")
+
+[node name="Cashier" type="StaticBody2D" parent="."]
+position = Vector2(1350, 1600)
+
+[node name="TextureRect" type="Sprite2D" parent="Cashier"]
+scale = Vector2(2, 2)
+texture = ExtResource("6_si4iq")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cashier"]
+position = Vector2(-25, -25)
+shape = SubResource("RectangleShape2D_lo845")
+
+[node name="Supermarket" parent="." instance=ExtResource("4_vjeq4")]
+
+[node name="Door" type="StaticBody2D" parent="."]
+position = Vector2(1700, 1600)
+
+[node name="TextureRect" type="Sprite2D" parent="Door"]
+scale = Vector2(2, 2)
+texture = ExtResource("8_7k70e")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(-100, 0)
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_lo845")
+
+[node name="Door2" type="StaticBody2D" parent="."]
+position = Vector2(1700, 1600)
+
+[node name="TextureRect" type="Sprite2D" parent="Door2"]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("8_7k70e")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
+position = Vector2(100, 0)
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_lo845")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("9_p2k0i")
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("10_p2eo8")]
+top_level = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="checkTime"]

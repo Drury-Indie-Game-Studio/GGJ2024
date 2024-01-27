@@ -1,0 +1,98 @@
+[gd_scene load_steps=22 format=3 uid="uid://cru6qktqsjm2j"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/collectible.gd" id="1_pshjp"]
+[ext_resource type="Texture2D" uid="uid://d2i6r8gbr16xn" path="res://Assets/Sprites/Ingredients/Apple.png" id="1_ti0ma"]
+[ext_resource type="Texture2D" uid="uid://dmn783dl5rl6m" path="res://Assets/Sprites/Ingredients/Banana.png" id="2_4ypoa"]
+[ext_resource type="Texture2D" uid="uid://bp5fxgnv25jhx" path="res://Assets/Sprites/Ingredients/Beef.png" id="3_ikk4n"]
+[ext_resource type="Texture2D" uid="uid://cf5ck1pafxomk" path="res://Assets/Sprites/Ingredients/Bread.png" id="4_7on7y"]
+[ext_resource type="Texture2D" uid="uid://b8q4k6uopbuma" path="res://Assets/Sprites/Ingredients/Brownie.png" id="5_hgo8x"]
+[ext_resource type="Texture2D" uid="uid://dwwdqneetmxl8" path="res://Assets/Sprites/Ingredients/Butter.png" id="6_2w12r"]
+[ext_resource type="Texture2D" uid="uid://bvqdctpc1wm0d" path="res://Assets/Sprites/Ingredients/Carrot.png" id="7_1njwk"]
+[ext_resource type="Texture2D" uid="uid://cv6vyoqac5nyk" path="res://Assets/Sprites/Ingredients/Cheese.png" id="8_4aou8"]
+[ext_resource type="Texture2D" uid="uid://bd2jxtthoe7ym" path="res://Assets/Sprites/Ingredients/Chicken.png" id="9_ob2hm"]
+[ext_resource type="Texture2D" uid="uid://bcin7wp6labu" path="res://Assets/Sprites/Ingredients/cookie.png" id="10_lrvgj"]
+[ext_resource type="Texture2D" uid="uid://pvmdw8n85px2" path="res://Assets/Sprites/Ingredients/Egg.png" id="11_kb3jn"]
+[ext_resource type="Texture2D" uid="uid://bxjuvulk1pop" path="res://Assets/Sprites/Ingredients/GarlicPowder.png" id="12_4hbvg"]
+[ext_resource type="Texture2D" uid="uid://bv5emjgukhjhx" path="res://Assets/Sprites/Ingredients/Lettuce.png" id="13_jwv8x"]
+[ext_resource type="Texture2D" uid="uid://dxjq0wtj6n88n" path="res://Assets/Sprites/Ingredients/Milk.png" id="14_rb88o"]
+[ext_resource type="Texture2D" uid="uid://cxo11g3cfirag" path="res://Assets/Sprites/Ingredients/Orange.png" id="15_kxlf5"]
+[ext_resource type="Texture2D" uid="uid://dkoj2ggf6gfsp" path="res://Assets/Sprites/Ingredients/Pepper.png" id="16_5vwpk"]
+[ext_resource type="Texture2D" uid="uid://dih1nve57smah" path="res://Assets/Sprites/Ingredients/Potato.png" id="17_8qjw0"]
+[ext_resource type="Texture2D" uid="uid://c8j2cxqnjno7v" path="res://Assets/Sprites/Ingredients/Salt.png" id="18_v3tch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc0ai"]
+size = Vector2(53, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbjyp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ti0ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4ypoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ikk4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7on7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hgo8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2w12r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1njwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4aou8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ob2hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lrvgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kb3jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4hbvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwv8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rb88o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kxlf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5vwpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8qjw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v3tch")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Collectible" type="Area2D"]
+script = ExtResource("1_pshjp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_jc0ai")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tbjyp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

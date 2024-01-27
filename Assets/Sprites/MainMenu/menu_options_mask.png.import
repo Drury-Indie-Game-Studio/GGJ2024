@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://chaw5v6bg5182"
+path="res://.godot/imported/menu_options_mask.png-3b565e6c498cfc973dac468c5a7ffdfe.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/MainMenu/menu_options_mask.png"
+dest_files=["res://.godot/imported/menu_options_mask.png-3b565e6c498cfc973dac468c5a7ffdfe.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

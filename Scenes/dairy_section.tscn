@@ -1,0 +1,269 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5hoj6oqfsuj7"]
+
+[ext_resource type="Texture2D" uid="uid://bwb6gqbu1cn38" path="res://Assets/Sprites/fridge.png" id="1_fwr44"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twvsu"]
+size = Vector2(100, 100)
+
+[node name="dairy_section" type="Node2D"]
+position = Vector2(50, 50)
+
+[node name="Stand7" type="StaticBody2D" parent="."]
+position = Vector2(400, 50)
+rotation = -3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand7"]
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand7"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand9" type="StaticBody2D" parent="."]
+position = Vector2(700, 50)
+rotation = -3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand9"]
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand9"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand11" type="StaticBody2D" parent="."]
+position = Vector2(200, 50)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand11"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand11"]
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand12" type="StaticBody2D" parent="."]
+position = Vector2(600, 50)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand12"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand12"]
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand6" type="StaticBody2D" parent="."]
+position = Vector2(300, 50)
+rotation = 3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand6"]
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand6"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand3" type="StaticBody2D" parent="."]
+position = Vector2(800, 50)
+rotation = 3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand3"]
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand3"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand2" type="StaticBody2D" parent="."]
+position = Vector2(900, 50)
+rotation = 3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand2"]
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand2"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand4" type="StaticBody2D" parent="."]
+position = Vector2(500, 50)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand4"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand4"]
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand8" type="StaticBody2D" parent="."]
+position = Vector2(1000, 250)
+rotation = 0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand8"]
+rotation = 0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand8"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand13" type="StaticBody2D" parent="."]
+position = Vector2(100, 50)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand13"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand13"]
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand15" type="StaticBody2D" parent="."]
+position = Vector2(1000, 450)
+rotation = 0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand15"]
+rotation = 0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand15"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand16" type="StaticBody2D" parent="."]
+position = Vector2(100, 250)
+rotation = -0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand16"]
+rotation = -0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand16"]
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand17" type="StaticBody2D" parent="."]
+position = Vector2(1000, 350)
+rotation = 0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand17"]
+rotation = 0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand17"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand5" type="StaticBody2D" parent="."]
+position = Vector2(100, 350)
+rotation = -0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand5"]
+rotation = -0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand5"]
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand19" type="StaticBody2D" parent="."]
+position = Vector2(100, 450)
+rotation = -0.785398
+
+[node name="TextureRect" type="Sprite2D" parent="Stand19"]
+rotation = -0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand19"]
+rotation = -0.785398
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand20" type="StaticBody2D" parent="."]
+position = Vector2(1000, 50)
+
+[node name="TextureRect" type="Sprite2D" parent="Stand20"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand20"]
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand10" type="StaticBody2D" parent="."]
+position = Vector2(400, 450)
+rotation = -3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand10"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand10"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand14" type="StaticBody2D" parent="."]
+position = Vector2(700, 450)
+rotation = -3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand14"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand14"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand18" type="StaticBody2D" parent="."]
+position = Vector2(600, 450)
+rotation = 3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand18"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand18"]
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_twvsu")
+
+[node name="Stand21" type="StaticBody2D" parent="."]
+position = Vector2(500, 450)
+rotation = 3.14159
+
+[node name="TextureRect" type="Sprite2D" parent="Stand21"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_fwr44")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand21"]
+shape = SubResource("RectangleShape2D_twvsu")

@@ -1,0 +1,241 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtaigigjbavp3"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/cook_off.gd" id="1_l3hke"]
+[ext_resource type="Texture2D" uid="uid://2uivodh2whyk" path="res://Assets/Sprites/Dads/Boomer.png" id="2_mhjw3"]
+[ext_resource type="Texture2D" uid="uid://debypx7ap5agy" path="res://Assets/Sprites/MainMenu/empty_bg.png" id="2_svlli"]
+[ext_resource type="Texture2D" uid="uid://ul1wwe5nev1k" path="res://Assets/Sprites/Dads/Football_dad.png" id="3_tdl2r"]
+[ext_resource type="Texture2D" uid="uid://b3injfer6lfdy" path="res://Assets/Sprites/Dishes/plate_1.png" id="4_douci"]
+[ext_resource type="Texture2D" uid="uid://bmagyshvyxrek" path="res://Assets/Sprites/Dads/Hippie.png" id="4_hfrlj"]
+[ext_resource type="Texture2D" uid="uid://b6ax74ibjk8yd" path="res://Assets/Sprites/Dads/MainDad.png" id="5_6sdsw"]
+[ext_resource type="Texture2D" uid="uid://yjv6m6rrs7cs" path="res://Assets/Sprites/Medals/First_place.png" id="5_i5l5k"]
+[ext_resource type="Texture2D" uid="uid://cwg2qg1maq2al" path="res://Assets/Sprites/Dishes/plate_2.png" id="6_oncr3"]
+[ext_resource type="Texture2D" uid="uid://hnlgovasytxw" path="res://Assets/Sprites/Dishes/plate_3.png" id="8_0u4w6"]
+[ext_resource type="Texture2D" uid="uid://bu48j7c5f8v7u" path="res://Assets/Sprites/Dishes/plate_4.png" id="10_3wp7g"]
+
+[node name="Cook-Off" type="Node2D"]
+script = ExtResource("1_l3hke")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MenuBg" type="Sprite2D" parent="UI"]
+modulate = Color(0.34902, 0.462745, 0.560784, 1)
+position = Vector2(988.889, 546.875)
+scale = Vector2(4.91667, 4.91667)
+texture = ExtResource("2_svlli")
+
+[node name="Dad1" type="CanvasGroup" parent="UI"]
+position = Vector2(988.889, 546.875)
+
+[node name="ColorRect" type="ColorRect" parent="UI/Dad1"]
+offset_left = -889.0
+offset_top = -497.0
+offset_right = -689.0
+offset_bottom = -297.0
+color = Color(0.313726, 0.101961, 0.152941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Dad1"]
+offset_left = -639.0
+offset_top = -497.0
+offset_right = 811.0
+offset_bottom = -297.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Dad1"]
+position = Vector2(-788.889, -396.041)
+scale = Vector2(2, 1.98332)
+texture = ExtResource("2_mhjw3")
+
+[node name="Label" type="Label" parent="UI/Dad1"]
+texture_filter = 2
+offset_left = -588.889
+offset_top = -420.875
+offset_right = 679.111
+offset_bottom = -353.875
+theme_override_font_sizes/font_size = 36
+text = "What’s white and black and ‘red’ all over? A newspaper."
+metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad1"]
+position = Vector2(-888.889, -346.875)
+scale = Vector2(2, 2)
+texture = ExtResource("4_douci")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad1"]
+position = Vector2(-688.889, -496.875)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
+[node name="Dad2" type="CanvasGroup" parent="UI"]
+position = Vector2(988.889, 546.875)
+
+[node name="ColorRect" type="ColorRect" parent="UI/Dad2"]
+offset_left = -888.889
+offset_top = -246.875
+offset_right = -688.889
+offset_bottom = -46.8751
+color = Color(0, 0.219608, 0.34902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Dad2"]
+offset_left = -638.889
+offset_top = -246.875
+offset_right = 811.111
+offset_bottom = -46.8751
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Dad2"]
+position = Vector2(-788.778, -145.916)
+scale = Vector2(2, 1.98332)
+texture = ExtResource("3_tdl2r")
+
+[node name="Label" type="Label" parent="UI/Dad2"]
+texture_filter = 2
+offset_left = -588.778
+offset_top = -170.75
+offset_right = 944.222
+offset_bottom = -103.75
+theme_override_font_sizes/font_size = 36
+text = "Why did the football coach go to the bank? To get his quarter back."
+metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad2"]
+position = Vector2(-888.889, -96.875)
+scale = Vector2(2, 2)
+texture = ExtResource("6_oncr3")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad2"]
+position = Vector2(-688.889, -246.875)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
+[node name="Dad3" type="CanvasGroup" parent="UI"]
+position = Vector2(988.889, 546.875)
+
+[node name="ColorRect" type="ColorRect" parent="UI/Dad3"]
+offset_left = -888.889
+offset_top = 3.12494
+offset_right = -688.889
+offset_bottom = 203.125
+color = Color(0.0941176, 0.223529, 0.105882, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Dad3"]
+offset_left = -638.889
+offset_top = 3.12494
+offset_right = 811.111
+offset_bottom = 203.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Dad3"]
+position = Vector2(-788.778, 104.084)
+scale = Vector2(2, 1.98332)
+texture = ExtResource("4_hfrlj")
+
+[node name="Label" type="Label" parent="UI/Dad3"]
+texture_filter = 2
+offset_left = -588.778
+offset_top = 79.2499
+offset_right = 679.222
+offset_bottom = 146.25
+theme_override_font_sizes/font_size = 36
+text = "So you want peace on Earth? A piece of what?"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad3"]
+position = Vector2(-888.889, 153.125)
+scale = Vector2(2, 2)
+texture = ExtResource("8_0u4w6")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad3"]
+position = Vector2(-688.889, 3.12497)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
+[node name="Dad4" type="CanvasGroup" parent="UI"]
+position = Vector2(988.889, 546.875)
+
+[node name="ColorRect" type="ColorRect" parent="UI/Dad4"]
+offset_left = -888.889
+offset_top = 253.125
+offset_right = -688.889
+offset_bottom = 453.125
+color = Color(0.313726, 0.290196, 0.117647, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/Dad4"]
+offset_left = -638.889
+offset_top = 253.125
+offset_right = 811.111
+offset_bottom = 453.125
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Dad4"]
+position = Vector2(-788.778, 354.084)
+scale = Vector2(2, 1.98332)
+texture = ExtResource("5_6sdsw")
+
+[node name="Pick" type="Label" parent="UI/Dad4"]
+texture_filter = 2
+offset_left = -588.778
+offset_top = 275.25
+offset_right = 679.222
+offset_bottom = 342.25
+theme_override_font_sizes/font_size = 36
+text = "Choose Your Dad-sona:
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Joke1" type="Button" parent="UI/Dad4"]
+offset_left = -589.0
+offset_top = 336.0
+offset_right = -239.0
+offset_bottom = 436.0
+theme_override_font_sizes/font_size = 48
+text = "Gym Buff"
+
+[node name="Joke2" type="Button" parent="UI/Dad4"]
+offset_left = -89.0
+offset_top = 336.0
+offset_right = 261.0
+offset_bottom = 436.0
+theme_override_font_sizes/font_size = 48
+text = "Cook"
+
+[node name="Joke3" type="Button" parent="UI/Dad4"]
+offset_left = 411.0
+offset_top = 336.0
+offset_right = 761.0
+offset_bottom = 436.0
+theme_override_font_sizes/font_size = 48
+text = "Trucker"
+
+[node name="Label" type="Label" parent="UI/Dad4"]
+visible = false
+texture_filter = 2
+offset_left = -588.889
+offset_top = 320.125
+offset_right = 679.111
+offset_bottom = 387.125
+theme_override_font_sizes/font_size = 36
+text = "Choose Your Dad-sona:
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dish" type="Sprite2D" parent="UI/Dad4"]
+position = Vector2(-888.889, 403.125)
+scale = Vector2(2, 2)
+texture = ExtResource("10_3wp7g")
+
+[node name="Medal" type="Sprite2D" parent="UI/Dad4"]
+position = Vector2(-688.889, 253.125)
+scale = Vector2(2, 2)
+texture = ExtResource("5_i5l5k")
+
+[connection signal="pressed" from="UI/Dad4/Joke1" to="." method="_on_joke_1_pressed"]
+[connection signal="pressed" from="UI/Dad4/Joke2" to="." method="_on_joke_2_pressed"]
+[connection signal="pressed" from="UI/Dad4/Joke3" to="." method="_on_joke_3_pressed"]

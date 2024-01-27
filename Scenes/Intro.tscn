@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfdp5ksiflbny"]
+
+[ext_resource type="Texture2D" uid="uid://dl7qfg1ipch3q" path="res://Assets/Sprites/MainMenu/bg_1.png" id="1_gup0a"]
+[ext_resource type="Script" path="res://Assets/Scripts/Intro.gd" id="1_lgwuh"]
+[ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="2_nyitn"]
+[ext_resource type="Texture2D" uid="uid://bpqddxifwt5hj" path="res://Assets/Sprites/Intro_background.png" id="4_ev248"]
+[ext_resource type="Script" path="res://Assets/Scripts/Label.gd" id="5_56w76"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_lgwuh")
+
+[node name="Bg1" type="Sprite2D" parent="."]
+position = Vector2(962.5, 544.25)
+scale = Vector2(4.7975, 4.79778)
+texture = ExtResource("1_gup0a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nyitn")
+
+[node name="IntroBackground" type="Sprite2D" parent="."]
+position = Vector2(950, 642)
+scale = Vector2(4.395, 4.75278)
+texture = ExtResource("4_ev248")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -25.0
+offset_top = 861.0
+offset_right = 1938.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 896.0
+offset_right = 1856.0
+offset_bottom = 971.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "You want to see the kids again. "
+script = ExtResource("5_56w76")

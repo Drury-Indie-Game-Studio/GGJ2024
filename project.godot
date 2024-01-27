@@ -11,9 +11,20 @@ config_version=5
 [application]
 
 config/name="Custody Cook-Off"
-run/main_scene="res://Scenes/fruit_section.tscn"
+run/main_scene="res://Scenes/MainMenuBackground.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SoundFx="*res://Assets/Scripts/sound_fx.gd"
+Global="*res://global.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [rendering]
 

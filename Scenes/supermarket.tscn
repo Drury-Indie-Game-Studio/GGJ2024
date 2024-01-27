@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://dam62j35tsg5u"]
+
+[ext_resource type="PackedScene" uid="uid://p1ds7c2ccr2r" path="res://Scenes/fruit_section.tscn" id="1_myrc3"]
+[ext_resource type="Script" path="res://Assets/Scripts/supermarket.gd" id="1_now5t"]
+[ext_resource type="PackedScene" uid="uid://bvwv8s3piv2wr" path="res://Scenes/bakery.tscn" id="2_lsdyy"]
+[ext_resource type="PackedScene" uid="uid://b5hoj6oqfsuj7" path="res://Scenes/dairy_section.tscn" id="3_ipfod"]
+[ext_resource type="PackedScene" path="res://Scenes/meats.tscn" id="4_l76qj"]
+[ext_resource type="PackedScene" path="res://Scenes/spices.tscn" id="5_at8re"]
+[ext_resource type="PackedScene" path="res://Scenes/veggies.tscn" id="6_p5flj"]
+[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="7_d43cc"]
+[ext_resource type="PackedScene" uid="uid://cru6qktqsjm2j" path="res://Scenes/collectible.tscn" id="9_l8xmf"]
+
+[node name="Supermarket" type="Node2D"]
+script = ExtResource("1_now5t")
+collectible = ExtResource("9_l8xmf")
+
+[node name="Fruits" parent="." instance=ExtResource("1_myrc3")]
+position = Vector2(1150, 0)
+
+[node name="Bakery" parent="." instance=ExtResource("2_lsdyy")]
+position = Vector2(0, 650)
+
+[node name="Dairy" parent="." instance=ExtResource("3_ipfod")]
+position = Vector2(1150, 700)
+
+[node name="Meats" parent="." instance=ExtResource("4_l76qj")]
+position = Vector2(2350, 50)
+
+[node name="Spices" parent="." instance=ExtResource("5_at8re")]
+position = Vector2(2350, 700)
+
+[node name="Veggies" parent="." instance=ExtResource("6_p5flj")]
+
+[node name="Player" parent="." instance=ExtResource("7_d43cc")]
+position = Vector2(1700, 1600)
