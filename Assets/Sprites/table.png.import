@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8cfan85qd76g"
-path="res://.godot/imported/bread_corner.png-7098706b7e0b56ec68c55513465be1c0.ctex"
+uid="uid://c57s4bjkpxa1q"
+path="res://.godot/imported/table.png-1c1366adec3c0bd92464a1fe6da1281c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bread_corner.png"
-dest_files=["res://.godot/imported/bread_corner.png-7098706b7e0b56ec68c55513465be1c0.ctex"]
+source_file="res://Assets/Sprites/table.png"
+dest_files=["res://.godot/imported/table.png-1c1366adec3c0bd92464a1fe6da1281c.ctex"]
 
 [params]
 
