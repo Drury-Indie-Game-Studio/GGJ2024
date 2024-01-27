@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfdp5ksiflbny"]
+[gd_scene load_steps=4 format=3 uid="uid://bfdp5ksiflbny"]
 
 [ext_resource type="Texture2D" uid="uid://dl7qfg1ipch3q" path="res://Assets/Sprites/MainMenu/bg_1.png" id="1_gup0a"]
+[ext_resource type="Script" path="res://Scenes/Intro.gd" id="1_lgwuh"]
+[ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="2_nyitn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_lgwuh")
 
 [node name="Bg1" type="Sprite2D" parent="."]
 position = Vector2(962.5, 544.25)
 scale = Vector2(4.7975, 4.79778)
 texture = ExtResource("1_gup0a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nyitn")
