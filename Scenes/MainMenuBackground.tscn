@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://bv0u2th6ow688"]
+[gd_scene load_steps=25 format=3 uid="uid://bv0u2th6ow688"]
 
 [ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_j2ff0"]
 [ext_resource type="Texture2D" uid="uid://dm4yeodgb40x" path="res://Assets/Sprites/MainMenu/menu_play.png" id="2_jsdh2"]
+[ext_resource type="PackedScene" uid="uid://bfdp5ksiflbny" path="res://Scenes/Intro.tscn" id="2_my154"]
 [ext_resource type="Texture2D" uid="uid://bv43eqpgeb7ym" path="res://Assets/Sprites/MainMenu/menu_play_2.png" id="3_74yu0"]
 [ext_resource type="BitMap" uid="uid://sesh3ln4vkla" path="res://Assets/Sprites/MainMenu/menu_play_mask.png" id="4_unk3v"]
 [ext_resource type="Texture2D" uid="uid://5vroh5obvmbg" path="res://Assets/Sprites/MainMenu/menu_options.png" id="5_4bifi"]
@@ -72,6 +73,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j2ff0")
 
+[node name="Node2D" parent="." instance=ExtResource("2_my154")]
+
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1920.0
@@ -123,4 +126,6 @@ texture = ExtResource("22_gy0p4")
 [connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlayButton" to="." method="start_game"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="quit_game"]
