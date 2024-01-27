@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://nekt8xunmldi"]
+
+[ext_resource type="Script" path="res://Scenes/World.gd" id="1_0jeua"]
+[ext_resource type="AudioStream" uid="uid://c54svo7xs0x6t" path="res://Assets/Sound/SFX/pop.wav" id="2_glh0w"]
+[ext_resource type="AudioStream" uid="uid://4ip0hhrnxe0v" path="res://Assets/Sound/SFX/Twinkle.mp3" id="3_hulk0"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_0jeua")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 259.0
+offset_right = 715.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 95
+text = "Testing"
+
+[node name="AudioStreamPlayer2D_1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_glh0w")
+
+[node name="AudioStreamPlayer2D_2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hulk0")

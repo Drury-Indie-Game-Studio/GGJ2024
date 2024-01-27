@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://1xr68ruol8qe"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_icej1"]
+[ext_resource type="Texture2D" uid="uid://ioh2hmheq4x8" path="res://player_placeholder.png" id="3_g45b1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ai6f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g45b1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17pgq"]
+size = Vector2(72, 73.5)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_icej1")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(1.9275, 1.91308)
+sprite_frames = SubResource("SpriteFrames_0ai6f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_17pgq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_speed = 10.0
