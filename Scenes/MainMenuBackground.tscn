@@ -1,68 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://clbpwtoq2hptd"]
+[gd_scene load_steps=12 format=3 uid="uid://bv0u2th6ow688"]
 
 [ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_j2ff0"]
 [ext_resource type="Texture2D" uid="uid://dm4yeodgb40x" path="res://Assets/Sprites/MainMenu/menu_play.png" id="2_jsdh2"]
 [ext_resource type="Texture2D" uid="uid://bv43eqpgeb7ym" path="res://Assets/Sprites/MainMenu/menu_play_2.png" id="3_74yu0"]
 [ext_resource type="BitMap" uid="uid://sesh3ln4vkla" path="res://Assets/Sprites/MainMenu/menu_play_mask.png" id="4_unk3v"]
 [ext_resource type="Texture2D" uid="uid://5vroh5obvmbg" path="res://Assets/Sprites/MainMenu/menu_options.png" id="5_4bifi"]
 [ext_resource type="Texture2D" uid="uid://xc35mej3hue2" path="res://Assets/Sprites/MainMenu/menu_quit.png" id="5_14wr4"]
-[ext_resource type="Script" path="res://Scenes/PlayButton.gd" id="5_ip4j1"]
 [ext_resource type="Texture2D" uid="uid://d2evto850m3r8" path="res://Assets/Sprites/MainMenu/menu_quit_2.png" id="6_48sar"]
-[ext_resource type="Texture2D" uid="uid://c23kk7g807oyp" path="res://Assets/Sprites/Play/Play_01.png" id="6_pt14n"]
-[ext_resource type="Texture2D" uid="uid://kd4loxa0n7ih" path="res://Assets/Sprites/Play/play_focus.png" id="6_sdspr"]
 [ext_resource type="Texture2D" uid="uid://cl5mx8spboqi4" path="res://Assets/Sprites/MainMenu/menu_options_2.png" id="6_tspjw"]
-[ext_resource type="Texture2D" uid="uid://byamwm3sa4lx3" path="res://Assets/Sprites/Play/Play_02.png" id="7_0p20a"]
 [ext_resource type="BitMap" uid="uid://chaw5v6bg5182" path="res://Assets/Sprites/MainMenu/menu_options_mask.png" id="7_leofl"]
 [ext_resource type="BitMap" uid="uid://c11cyl5a4wrdh" path="res://Assets/Sprites/MainMenu/menu_quit_mask.png" id="7_r8e7u"]
-[ext_resource type="Texture2D" uid="uid://cxj3odtxpa6j5" path="res://Assets/Sprites/Play/Play_03.png" id="8_afmx1"]
-[ext_resource type="Texture2D" uid="uid://brnfxta0rq40o" path="res://Assets/Sprites/Play/Play_04.png" id="9_l6j56"]
-[ext_resource type="Script" path="res://Scenes/SettingsButton.gd" id="9_pdfan"]
-[ext_resource type="Texture2D" uid="uid://bgro5fql7gxaq" path="res://Assets/Sprites/Play/Play_05.png" id="10_0d3iq"]
-[ext_resource type="Texture2D" uid="uid://dw1itv0s81n5t" path="res://Assets/Sprites/Play/Play_06.png" id="11_fg4ul"]
-[ext_resource type="Texture2D" uid="uid://ce0pxi15gptv5" path="res://Assets/Sprites/Play/Play_07.png" id="12_uvtrn"]
-[ext_resource type="Texture2D" uid="uid://dd6baao8hpl1o" path="res://Assets/Sprites/Play/Play_08.png" id="13_gj4pb"]
-[ext_resource type="Script" path="res://Scenes/QuitButton.gd" id="13_l6dej"]
-[ext_resource type="Texture2D" uid="uid://dndysfr5gpkje" path="res://Assets/Sprites/MainMenu/Custody_Cook-Off_Logo.png" id="23_82u8i"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2ku4j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_sdspr")
-}],
-"loop": true,
-"name": &"Focus",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_pt14n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_0p20a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_afmx1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_l6j56")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_0d3iq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_fg4ul")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_uvtrn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_gj4pb")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -71,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j2ff0")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -87,13 +36,6 @@ texture_pressed = ExtResource("2_jsdh2")
 texture_hover = ExtResource("3_74yu0")
 texture_click_mask = ExtResource("4_unk3v")
 stretch_mode = 0
-script = ExtResource("5_ip4j1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayButton"]
-position = Vector2(960.5, 540.75)
-scale = Vector2(4.7825, 4.77111)
-sprite_frames = SubResource("SpriteFrames_2ku4j")
-animation = &"Focus"
 
 [node name="SettingsButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -104,7 +46,6 @@ texture_pressed = ExtResource("5_4bifi")
 texture_hover = ExtResource("6_tspjw")
 texture_click_mask = ExtResource("7_leofl")
 stretch_mode = 0
-script = ExtResource("9_pdfan")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -115,14 +56,6 @@ texture_pressed = ExtResource("5_14wr4")
 texture_hover = ExtResource("6_48sar")
 texture_click_mask = ExtResource("7_r8e7u")
 stretch_mode = 0
-script = ExtResource("13_l6dej")
 
-[node name="CustodyCook-offLogo" type="Sprite2D" parent="."]
-position = Vector2(1472, 286)
-scale = Vector2(4.213, 6.1425)
-texture = ExtResource("23_82u8i")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
-[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="PlayButton" to="." method="start_game"]
+[connection signal="pressed" from="QuitButton" to="." method="quit_game"]
