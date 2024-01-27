@@ -12,7 +12,7 @@ var section_locations = [
 	Vector2(2400,800)
 ]
 
-var frames = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+var frames = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,12 +32,14 @@ func _ready():
 	$Spices.position = section_locations[index]
 	section_locations.remove_at(index)
 	$Veggies.position = section_locations[0]
-	
-	for i in frames:
+
+func placeItems():
+	for f in frames:
 		var item = collectible.instantiate()
 		add_child(item)
-		item.get_child(1).frame = i
-		item.position = placeItem(i)
+		item.get_child(1).frame = f
+		item.position = placeItem(f)
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func placeItem(itemIndex):
 	match (itemIndex):
