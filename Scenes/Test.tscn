@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dtlos3ptjixq5"]
+[gd_scene load_steps=2 format=3 uid="uid://dtlos3ptjixq5"]
+
+[ext_resource type="AudioStream" uid="uid://bg5jkle1iloss" path="res://Assets/Sound/SFX/airhorn.wav" id="1_m07qw"]
 
 [node name="Label" type="Label"]
 offset_left = 592.0
@@ -6,3 +8,6 @@ offset_top = 292.0
 offset_right = 632.0
 offset_bottom = 315.0
 text = "TEST"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_m07qw")
