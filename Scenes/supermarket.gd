@@ -1,6 +1,7 @@
 extends Node2D
 
 var index = 0
+@export var collectible: PackedScene
 
 var section_locations = [
 	Vector2(0,0),
@@ -29,6 +30,13 @@ func _ready():
 	$Spices.position = section_locations[index]
 	section_locations.remove_at(index)
 	$Veggies.position = section_locations[0]
+	
+	var item = collectible.instantiate()
+	add_child(item)
+	item.get_child(0).animation = "default"
+	item.get_child(0).play()
+	item.get_child(0).set_frame_and_progress(10,1.0)
+	print(item.get_child(0).frame)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

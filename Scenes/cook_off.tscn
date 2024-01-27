@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dtaigigjbavp3"]
 
 [ext_resource type="Script" path="res://Scenes/cook_off.gd" id="1_l3hke"]
-[ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_x4en2"]
 [ext_resource type="Texture2D" uid="uid://2uivodh2whyk" path="res://Assets/Sprites/Dads/Boomer.png" id="2_mhjw3"]
+[ext_resource type="Texture2D" uid="uid://debypx7ap5agy" path="res://Assets/Sprites/MainMenu/empty_bg.png" id="2_svlli"]
 [ext_resource type="Texture2D" uid="uid://ul1wwe5nev1k" path="res://Assets/Sprites/Dads/Football_dad.png" id="3_tdl2r"]
 [ext_resource type="Texture2D" uid="uid://bmagyshvyxrek" path="res://Assets/Sprites/Dads/Hippie.png" id="4_hfrlj"]
 [ext_resource type="Texture2D" uid="uid://b6ax74ibjk8yd" path="res://Assets/Sprites/Dads/MainDad.png" id="5_6sdsw"]
@@ -16,7 +16,7 @@ script = ExtResource("1_l3hke")
 modulate = Color(0.34902, 0.462745, 0.560784, 1)
 position = Vector2(988.889, 546.875)
 scale = Vector2(4.91667, 4.91667)
-texture = ExtResource("1_x4en2")
+texture = ExtResource("2_svlli")
 
 [node name="Dad1" type="CanvasGroup" parent="UI"]
 position = Vector2(988.889, 546.875)

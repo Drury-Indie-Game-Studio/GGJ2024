@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dam62j35tsg5u"]
+[gd_scene load_steps=10 format=3 uid="uid://dam62j35tsg5u"]
 
 [ext_resource type="PackedScene" uid="uid://p1ds7c2ccr2r" path="res://Scenes/fruit_section.tscn" id="1_myrc3"]
 [ext_resource type="Script" path="res://Scenes/supermarket.gd" id="1_now5t"]
@@ -8,9 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://di3veud4o56or" path="res://Scenes/spices.tscn" id="5_at8re"]
 [ext_resource type="PackedScene" uid="uid://oyji51f14csn" path="res://Scenes/veggies.tscn" id="6_p5flj"]
 [ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="7_d43cc"]
+[ext_resource type="PackedScene" uid="uid://cru6qktqsjm2j" path="res://Scenes/collectible.tscn" id="9_l8xmf"]
 
 [node name="Supermarket" type="Node2D"]
 script = ExtResource("1_now5t")
+collectible = ExtResource("9_l8xmf")
 
 [node name="Fruits" parent="." instance=ExtResource("1_myrc3")]
 position = Vector2(1150, 0)
@@ -31,3 +33,6 @@ position = Vector2(2350, 700)
 
 [node name="Player" parent="." instance=ExtResource("7_d43cc")]
 position = Vector2(1700, 1600)
+
+[node name="Collectible" parent="." instance=ExtResource("9_l8xmf")]
+position = Vector2(1700, 1500)
