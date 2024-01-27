@@ -1,6 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw14epdojylv3"]
+[gd_scene load_steps=11 format=3 uid="uid://bw14epdojylv3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/StartButton.gd" id="1_lndyy"]
+[ext_resource type="Texture2D" uid="uid://cnlnojewacvb1" path="res://Assets/Sprites/Start_01.png" id="2_gqp1m"]
+[ext_resource type="Texture2D" uid="uid://c8sp27ei2tull" path="res://Assets/Sprites/Start_02.png" id="3_urk6g"]
+[ext_resource type="Texture2D" uid="uid://b1hc2h3rbw3n" path="res://Assets/Sprites/Start_03.png" id="4_bx0yi"]
+[ext_resource type="Texture2D" uid="uid://chyb2keyqov7i" path="res://Assets/Sprites/Start_04.png" id="5_ur14n"]
+[ext_resource type="Texture2D" uid="uid://2qrmcnxls6b2" path="res://Assets/Sprites/Start_05.png" id="6_q0veq"]
+[ext_resource type="Texture2D" uid="uid://ddue0q448njhc" path="res://Assets/Sprites/Start_06.png" id="7_0fcf2"]
+[ext_resource type="Texture2D" uid="uid://d4baxq6xk8le4" path="res://Assets/Sprites/Start_07.png" id="8_730sm"]
+[ext_resource type="Texture2D" uid="uid://df5m4f4oxrflq" path="res://Assets/Sprites/Start_08.png" id="9_wu50f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v65os"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gqp1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_urk6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bx0yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ur14n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q0veq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0fcf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_730sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wu50f")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -41,6 +81,12 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 42
 text = "Start"
 script = ExtResource("1_lndyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer - Main/VBoxContainer - Buttons/Start"]
+position = Vector2(54.25, 32)
+scale = Vector2(2.63, 2.7125)
+sprite_frames = SubResource("SpriteFrames_v65os")
+animation = &"Idle"
 
 [node name="Settings" type="Label" parent="VBoxContainer - Main/VBoxContainer - Buttons"]
 layout_mode = 2
