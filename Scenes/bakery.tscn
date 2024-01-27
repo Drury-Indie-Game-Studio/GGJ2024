@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvwv8s3piv2wr"]
 
-[ext_resource type="Texture2D" uid="uid://v2xd26q0enpu" path="res://bread.png" id="1_sfsai"]
-[ext_resource type="Texture2D" uid="uid://c8cfan85qd76g" path="res://bread_corner.png" id="2_21wjg"]
-[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://player.tscn" id="3_pwoq3"]
+[ext_resource type="Texture2D" uid="uid://v2xd26q0enpu" path="res://Assets/Sprites/bread.png" id="1_sfsai"]
+[ext_resource type="Texture2D" uid="uid://c8cfan85qd76g" path="res://Assets/Sprites/bread_corner.png" id="2_21wjg"]
+[ext_resource type="PackedScene" uid="uid://1xr68ruol8qe" path="res://Scenes/player.tscn" id="3_pwoq3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g77q1"]
 size = Vector2(100, 100)
