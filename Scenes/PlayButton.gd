@@ -5,8 +5,6 @@ func _ready():
 
 
 
-
-
 func _on_mouse_entered():
 	get_node("AnimatedSprite2D").play("Focus")
 

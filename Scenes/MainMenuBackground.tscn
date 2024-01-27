@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bv0u2th6ow688"]
+[gd_scene load_steps=24 format=3 uid="uid://bv0u2th6ow688"]
 
 [ext_resource type="Texture2D" uid="uid://cw5qrg7wqxigk" path="res://Assets/Sprites/MainMenu/menu_bg.png" id="1_88e6r"]
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_j2ff0"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dw1itv0s81n5t" path="res://Assets/Sprites/Play/Play_06.png" id="13_rqqju"]
 [ext_resource type="Texture2D" uid="uid://ce0pxi15gptv5" path="res://Assets/Sprites/Play/Play_07.png" id="14_qscro"]
 [ext_resource type="Texture2D" uid="uid://dd6baao8hpl1o" path="res://Assets/Sprites/Play/Play_08.png" id="15_50hp0"]
+[ext_resource type="Texture2D" uid="uid://dndysfr5gpkje" path="res://Assets/Sprites/MainMenu/Custody_Cook-Off_Logo.png" id="22_gy0p4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q715m"]
 animations = [{
@@ -113,6 +114,11 @@ texture_pressed = ExtResource("5_14wr4")
 texture_hover = ExtResource("6_48sar")
 texture_click_mask = ExtResource("7_r8e7u")
 stretch_mode = 0
+
+[node name="CustodyCook-offLogo" type="Sprite2D" parent="."]
+position = Vector2(1394, 310)
+scale = Vector2(3.512, 6.96)
+texture = ExtResource("22_gy0p4")
 
 [connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
