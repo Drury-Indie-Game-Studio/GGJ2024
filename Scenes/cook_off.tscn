@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bu48j7c5f8v7u" path="res://Assets/Sprites/Dishes/plate_4.png" id="10_3wp7g"]
 [ext_resource type="AudioStream" uid="uid://cda5k86dnemt2" path="res://Assets/Sound/Music/03 - judging.wav" id="12_iute8"]
 [ext_resource type="AudioStream" uid="uid://crbnbs5n27ybx" path="res://Assets/Sound/SFX/yay.mp3" id="13_xq1d1"]
-[ext_resource type="AudioStream" uid="uid://ct5wruhhiexp0" path="res://Assets/Sound/Music/04 - gameover.wav" id="14_mw5ug"]
+[ext_resource type="AudioStream" uid="uid://ct5wruhhiexp0" path="res://Assets/Sound/Music/04 - gameover.wav" id="14_7vbhr"]
 
 [node name="Cook-Off" type="Node2D"]
 script = ExtResource("1_l3hke")
@@ -251,7 +251,7 @@ stream = ExtResource("13_xq1d1")
 volume_db = 15.0
 
 [node name="Loss" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("14_mw5ug")
+stream = ExtResource("14_7vbhr")
 volume_db = 10.0
 
 [connection signal="pressed" from="UI/Dad4/Joke1" to="." method="_on_joke_1_pressed"]
